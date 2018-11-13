@@ -1,0 +1,47 @@
+﻿@model IEnumerable<DotNetCoreSqlDb.Models.SenseHat>
+@{
+    ViewData["Title"] = "Index";
+}
+<h2>Sense Hat Data</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Air Temperature
+            </th>
+            <th>
+                Air Pressure
+            </th>
+            <th>
+                Humidity
+            </th>
+            <th>
+                Entry Date
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Sense_hat_temperature)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Sense_hat_air_pressure)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Sense_hat_humidity)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Sense_hat_datetime)
+                </td>
+                <td>
+                    <a asp-action="Details" asp-route-id="@item.Sense_hat_entry_id">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Sense_hat_entry_id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
