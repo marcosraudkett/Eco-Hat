@@ -1,3 +1,3 @@
 # Chaos Hat
 
-### "Smart" Raspberry PI and C#-based IOT solution for gathering, storing and displaying various room data from Sense HAT extension module.
+### Eco Hat by Organized Chaos (A complete package for controlling and analyzing room data such as temperature, air pressure and humidity with a graphical user interface)
